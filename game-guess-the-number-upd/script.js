@@ -43,8 +43,7 @@ const gameGuessNumber = () => {
 
     const getMatchCheck = (number) => {
         if (number === findNumber) {
-            sendMessage('Поздравляю, Вы угадали!!!');
-            rePlay('Желаете сыграть еще раз?');
+            rePlay('Поздравляю, Вы угадали!!! Хотели бы сыграть еще?');
         } else if (attempts === 0) {
             rePlay('Попытки закончились,хотите сыграть еще?');
         } else if (number < findNumber) {
@@ -70,7 +69,6 @@ const gameGuessNumber = () => {
             gameGuessNumber();
         }
     };
-
 
     //блок функционала
     sendMessage('Игра начинается!');
